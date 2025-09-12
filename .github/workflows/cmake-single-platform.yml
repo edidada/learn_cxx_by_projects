@@ -32,10 +32,10 @@ jobs:
       run: cd sgi_allocator && cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
     - name: Configure CMake plugin-manager
-      run: cd plugin-manager && cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      run: cd plugin-manager && cmake -B ${{github.workspace}}/build2 -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
     - name: Build plugin-manager
       # Build your program with the given configuration
-      run: cd plugin-manager && cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+      run: cd plugin-manager && cmake --build ${{github.workspace}}/build2 --config ${{env.BUILD_TYPE}}
 
 
